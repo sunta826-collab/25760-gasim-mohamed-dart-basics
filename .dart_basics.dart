@@ -41,6 +41,31 @@ void drawTriangle(int height) {
   }
 }
 
+// D2
+int momoFee(int amount) {
+  // by MKG
+  if (amount <= 0) {
+    return -1;
+  } else if (amount <= 1000) {
+    return 20;
+  } else if (amount <= 10000) {
+    return 100;
+  } else if (amount <= 150000) {
+    return 250;
+  } else {
+    return 1500;
+  }
+}
+
+String maskPhone(String phone) {
+  // by MKG
+  if (phone.length != 10) {
+    return 'INVALID';
+  }
+  return phone.substring(0, 3) +
+      '*****' + phone.substring(8);
+}
+
 void main() {
   // by MKG
   print('Reg no: $regNo | D = $d | T = $t');
@@ -55,4 +80,20 @@ void main() {
   drawTriangle(d + 3);
   drawTriangle(0);
   drawTriangle(-2);
+
+  int i = 1;
+  int total = 0;
+  String phone = '0796151632';
+
+  while (i <= d + 3) {
+    int amount = i * 4000 + t * 100;
+    int fee = momoFee(amount);
+    total += fee;
+
+    print('Receipt $i | $amount RWF | fee $fee RWF | to ${maskPhone(phone)}');
+
+    i++;
+  }
+
+  print('Total fees: $total RWF');
 }
