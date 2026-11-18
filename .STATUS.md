@@ -1,8 +1,12 @@
 # Done
-- GitHub repository created.
+- Completed Parts A to G.
+- Tested the Dart programs.
+- Completed the MoMo simulator.
+- Tested and fixed three errors.
+- Uploaded the final answers.pdf.
 
 # In progress
-- Part A: Variables and operators.
+- None.
 
 # Stuck on
-- None so far.
+- None.
