@@ -31,6 +31,16 @@ String initials(String fullName) {
   return result;
 }
 
+// C5
+void drawTriangle(int height) {
+  // by MKG
+  for (int i = 1; i <= height; i++) {
+    String spaces = ' ' * (height - i);
+    String symbol = i % 2 == 0 ? '#' : '*';
+    print(spaces + symbol * i);
+  }
+}
+
 void main() {
   // by MKG
   print('Reg no: $regNo | D = $d | T = $t');
@@ -41,4 +51,8 @@ void main() {
   print(initials(name));
   print(initials(' ana uwase '));
   print(initials(' '));
+
+  drawTriangle(d + 3);
+  drawTriangle(0);
+  drawTriangle(-2);
 }
